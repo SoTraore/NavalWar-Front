@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+<br>
+<br>
+
+<app-boat *ngFor="let singleBoat of myBoats" [boatManager]="singleBoat"></app-boat>
+
+<app-map *ngFor="let mapElt of myMaps" [mapManager]="mapElt"></app-map>

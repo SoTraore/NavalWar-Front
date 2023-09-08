@@ -1,0 +1,63 @@
+
+
+//-------------- niveau 0 ----------------
+
+input {
+    width: 30px;
+}
+
+// button {
+//     height: 20px;
+// }
+
+
+//-------------- niveau 1 ----------------
+
+.container {
+    display: block;
+    margin-left: 8%;
+    margin-top:  30px;
+}
+
+//-------------- niveau 2 ----------------
+
+.singleBlock {
+    float: left;
+    margin-right: 6%;
+}
+
+//-------------- niveau 3 ----------------
+
+.entireBoat {
+
+    float: left;
+
+    button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.placerBoat {
+    clear: both;
+    height: 70px;
+}
+
+
+//-------------- niveau 4 ----------------
+
+.getInput {
+    padding-top: 10px;
+}
+
+.id_value {
+    padding: 0px  5px 5px 10px;
+    color: black;
+    margin-left: 10px ;
+}
+
+//-------------- niveau 5 ---------------
+
+.submit {
+    margin-top: 10px;
+}

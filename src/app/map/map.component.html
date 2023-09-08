@@ -1,0 +1,15 @@
+<div class="mapBody">
+
+     <div class="mapClass" (click)="displayBoatsOnMap(mapManager)"> <!--(click)="" -->
+        <h1>Map of {{ mapManager.name }}</h1>
+        <br>
+        <p class="map-col" *ngFor="let i of range(0, mapManager.size)">
+            <span class="map-row" *ngFor="let j of range(0, mapManager.size);">
+                <button [ngStyle]="{ 'background-color': mapManager.table[i][j] }" 
+                        (click)="makeShot(i, j, myMaps)">
+                </button>
+            </span>
+        </p>
+    </div>
+
+</div>

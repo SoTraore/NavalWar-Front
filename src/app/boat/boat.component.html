@@ -1,0 +1,36 @@
+
+<div class="container" *ngIf="!allBoatsPlacedOnTheMap()">
+    <div class="singleBlock">
+
+        <div class="entireBoat">
+            <h3>Boat of {{ boatManager.nbCase }}</h3>
+            <p>
+                <span class="boatCase" *ngFor="let i of getArray(boatManager.nbCase)">
+                    <button [ngStyle]="{ 'background-color': boatManager.colorB }"></button>
+                </span>
+            </p>
+            <!-- Orientation Horizontal par defaut -->
+            <p>
+                <button (click)="pivoter(boatManager)">{{boatManager.orientation}}</button>
+            </p>
+        </div>
+        
+        <div class="placerBoat" >
+            <button (click)="setBoatOnMap = !setBoatOnMap">Placer le Boat</button>
+            <div *ngIf="setBoatOnMap" class="getInput">
+                x: <input [(ngModel)]="boatManager.pos.x" type="number">
+                y: <input [(ngModel)]="boatManager.pos.y" type="number">
+                <span class="id_value" [ngStyle]="{'background-color': boatManager.colorB}">id: {{boatManager.pos.id}}</span> 
+                <br>
+                <!-- displayBoat(boatManager) -->
+            </div>       
+            <div class="submit" (click)="setBoatOnMap = !setBoatOnMap;">
+                <span *ngIf="(boatManager.pos.x > -1 && boatManager.pos.y > -1)">
+                    <button (click)="sendBoatPosition(boatManager)">Appliquer</button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
